@@ -648,6 +648,13 @@ namespace Overlay.NET.Directx
         /// <param name="bufferText">if set to <c>true</c> [buffer text].</param>
         public void DrawText(string text, int font, int brush, int x, int y, bool bufferText = true)
         {
+            // Ensure there is at least one font in the font container
+            if (_fontContainer.Count == 0)
+            {
+                // Create a default font if none exist
+                _fontContainer.Add(new TextFormat(_fontFactory, "Arial", FontWeight.Normal, FontStyle.Normal, 12));
+            }
+
             if (bufferText)
             {
                 var bufferPos = -1;
@@ -679,6 +686,7 @@ namespace Overlay.NET.Directx
                 layout.Dispose();
             }
         }
+
 
         public void DrawBitmap(float x, float y, Bitmap bitmap, float opacity, BitmapInterpolationMode interpolationMode)
         {
