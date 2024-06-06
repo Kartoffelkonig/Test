@@ -26,6 +26,8 @@ public partial class SettingForm : Form
 
         cbShowPlayers.Checked = config.Players.ShowPlayers;
         cbPlaySound.Checked = config.Players.PlaySound;
+        cbShowPlayerNames.Checked = config.Players.ShowPlayerNames;
+        cbShowGuilds.Checked = config.Players.ShowGuilds;
 
         // Wood
         for (int i = 0; i < config.Wood.Tier.Length; ++i)
@@ -179,6 +181,8 @@ public partial class SettingForm : Form
 
         config.Players.ShowPlayers = cbShowPlayers.Checked;
         config.Players.PlaySound = cbPlaySound.Checked;
+        config.Players.ShowPlayerNames = cbShowPlayerNames.Checked;
+        config.Players.ShowGuilds = cbShowGuilds.Checked;
 
         // Wood
         for (int i = 0; i < config.Wood.Tier.Length; ++i)

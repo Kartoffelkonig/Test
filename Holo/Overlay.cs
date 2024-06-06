@@ -131,7 +131,7 @@ public sealed class Overlay : DirectXOverlayPlugin
 
         OverlayWindow.Graphics.GetDevice().Transform = translateMatrix;
 
-        // Dot in center (owr player)
+        // Dot in center (our player)
         OverlayWindow.Graphics.FillCircle(1, 1, 5, _localPlayerBrush);
 
         float lpX = PlayerHandler.GetLocalPlayerPosX();
@@ -183,9 +183,6 @@ public sealed class Overlay : DirectXOverlayPlugin
                 continue;
 
             OverlayWindow.Graphics.DrawBitmap(hX, hY, icon, 1, BitmapInterpolationMode.Linear);
-
-            //if (h.Charges > 0)
-            //    g.DrawEllipse(ChargePen[h.Charges], hX - 3, hY - 3, 6, 6);
         }
 
         if (Config.Instance.Players.ShowPlayers)
@@ -203,6 +200,18 @@ public sealed class Overlay : DirectXOverlayPlugin
                     continue;
 
                 OverlayWindow.Graphics.FillEllipse(hX, hY, 5, _playerBrush);
+
+                if (Config.Instance.Players.ShowPlayerNames)
+                {
+                    // Draw the player's name above the guild name, slightly to the right
+                    OverlayWindow.Graphics.DrawText(p.Nickname, 0, _playerBrush, (int)(hX + 5), (int)(hY - 20), true);
+                }
+
+                if (Config.Instance.Players.ShowGuilds)
+                {
+                    // Draw the guild name below the player's name, slightly to the right
+                    OverlayWindow.Graphics.DrawText(p.Guild, 0, _playerBrush, (int)(hX + 5), (int)(hY - 10), true);
+                }
             }
         }
 

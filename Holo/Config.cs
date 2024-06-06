@@ -66,8 +66,11 @@ public sealed class Config
     public class PlayerSettings
     {
         public bool ShowPlayers { get; set; } = true;
+        public bool ShowPlayerNames { get; set; } = true; // Add this
+        public bool ShowGuilds { get; set; } = true; // And this
         public bool PlaySound { get; set; } = false;
     }
+
 
     private static void Default()
     {
