@@ -53,7 +53,6 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 [buymeacoffee-icon]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/deadmouse
 
--   USDT (TRC20): TMrC25iB2snpnhSjHUG5rJf8ctwi3XXYaQ
--   BTC: 1ABhnyjih9grcBVWF55sL6W8gujvKrEfMa
--   TON: UQAjntmfvAx6wG9bXb6HxI7OOf6X8OFCznjSE929WotoJDZu
+-   USDT (TRC20): TWtBGaugzDYZMdnFwyMDQFRWFi9gEUv3LX
+-   BTC: bc1q2dpd4vd9wu6qc90fhdsyyymwvqsse5xsnshfdt
 -   NOT: UQA7abQ0dbmqPOQYFVbg0wjs1yjsshtwc-KtOqzUNcmMM4hS
